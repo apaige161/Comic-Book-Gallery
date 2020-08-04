@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing.Printing;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -12,9 +13,16 @@ namespace ComicBookGallery.Controllers
     {
         //add action method
         //must type in comicbook/detail to get to the string
-        public string Detail()
+        public ActionResult Detail()
         {
-            return "Hello from comic books controller";
+            //redirect to home page if it is monday
+            if(DateTime.Today.DayOfWeek == DayOfWeek.Tuesday)
+            {
+                return Redirect("/");
+            }
+            return Content("Hello from the Comic Book controller");
+
+
         }
     }
 }
