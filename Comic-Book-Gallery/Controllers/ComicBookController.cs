@@ -11,10 +11,22 @@ namespace ComicBookGallery.Controllers
     //needs to be public so the web app can access the controller
     public class ComicBooksController : Controller
     {
-        //add action method
-        //must type in comicbook/detail to get to the string
+        //place data here
         public ActionResult Detail()
         {
+
+            ViewBag.SeriesTitle = "The Amazing Spider-Man";
+            ViewBag.issueNumber = 700;
+            ViewBag.Description = "<p>Final issue! Witness the final hours of Doctor Octopus' life and his one, last, great act of revenge! Even if Spider-Man survives... <strong>will Peter Parker?</strong></p>";
+            ViewBag.Artists = new string[]
+            {
+                "Script: Dan Slott",
+                "Pencils: Humberto Ramos",
+                "Inks: Victor Olazaba",
+                "Colors: Edgar Delgado",
+                "Letters: Chris Eliopoulos"
+            };
+
             return View();
         }
     }
