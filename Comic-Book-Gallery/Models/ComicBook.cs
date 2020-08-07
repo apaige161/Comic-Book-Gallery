@@ -22,7 +22,7 @@ namespace Comic_Book_Gallery.Models
             //readonly
             get
             {
-                return SeriesTitle + "#" + IssueNumber;
+                return SeriesTitle + "# " + IssueNumber;
             }
         }
 
