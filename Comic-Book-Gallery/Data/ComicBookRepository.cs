@@ -60,6 +60,12 @@ namespace Comic_Book_Gallery.Data
             }
         };
 
+        //comic book list
+        public ComicBook[] GetComicBooks()
+        {
+            return _comicBooks;
+        }
+
 
         //creat a repo to create multiple comic book objects
         public ComicBook GetComicBook(int id)

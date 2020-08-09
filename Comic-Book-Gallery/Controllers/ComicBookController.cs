@@ -24,6 +24,16 @@ namespace ComicBookGallery.Controllers
             _comicBookRepository = new ComicBookRepository();
         }
 
+        //index action method - return action result object
+        public ActionResult Index()
+        {
+            var comicBooks = _comicBookRepository.GetComicBooks();
+            //return a view
+            return View(comicBooks);
+
+        }
+
+
         //int? make the int nullable, meaning that if there is no id it will still work
         public ActionResult Detail(int? id)
         {
