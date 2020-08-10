@@ -28,6 +28,19 @@
         </div>
     </div>
 
+    <!-- only display back button in the detail view-->
+    @if (ViewBag.ShowBackBar != null && ViewBag.ShowBackBar)
+    {
+        <div class="backbar">
+            <div class="container">
+                @Html.ActionLink("Return to list", "Index",
+               null, new { @class = "btn btn-default" })
+                <a class="btn btn-default" href="/">Return to List</a>
+            </div>
+        </div>
+    }
+
+
     <div class="container body-content">
         <!--this is where the view will be displayed-->
         @RenderBody()

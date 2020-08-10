@@ -10,6 +10,16 @@ using System.Web.Mvc;
 
 namespace ComicBookGallery.Controllers
 {
+    /*
+     * 
+     * 
+     * Something is weird calling the @model in our views that is causing errors
+     */
+
+
+
+
+
     //needs to reference the base controllers class
     //needs to be public so the web app can access the controller
     public class ComicBooksController : Controller

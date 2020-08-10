@@ -16,7 +16,8 @@ namespace Comic_Book_Gallery
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                //create custom route
+                defaults: new { controller = "ComicBooks", action = "Index", id = UrlParameter.Optional }
             );
         }
     }
